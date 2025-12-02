@@ -1,81 +1,101 @@
-import { Heart, Linkedin, Github, Mail } from "lucide-react";
+import { Heart, Linkedin, Github, Mail, MapPin, Send } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-foreground text-background py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+    <footer id="connect" className="bg-foreground text-background">
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">N</span>
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-gradient-start to-gradient-end rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-xl">N</span>
               </div>
-              <span className="font-semibold text-lg">Nithyanand V K</span>
+              <div>
+                <span className="font-bold text-xl block">Nithyanand V K</span>
+                <span className="text-background/60 text-sm">Full Stack Developer</span>
+              </div>
             </div>
-            <p className="text-background/70 text-sm">
-              Full Stack Developer specializing in MERN stack and Java. Building elegant, 
-              high-performance web applications.
+            <p className="text-background/70 mb-6 max-w-md leading-relaxed">
+              Building elegant web solutions with modern technologies. 
+              Passionate about clean code, scalable architecture, and creating impactful digital experiences.
             </p>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://linkedin.com/in/nithyanandvk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-background/10 rounded-xl hover:bg-primary hover:text-white transition-all"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/nithyanandvk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-background/10 rounded-xl hover:bg-primary hover:text-white transition-all"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:nithyanandvk2005@gmail.com"
+                className="p-3 bg-background/10 rounded-xl hover:bg-primary hover:text-white transition-all"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <div className="grid grid-cols-2 gap-2">
-              <a href="#home" className="text-background/70 hover:text-background transition-colors text-sm">Home</a>
-              <a href="#skills" className="text-background/70 hover:text-background transition-colors text-sm">Skills</a>
-              <a href="#achievements" className="text-background/70 hover:text-background transition-colors text-sm">Achievements</a>
-              <a href="#experience" className="text-background/70 hover:text-background transition-colors text-sm">Experience</a>
-              <a href="#education" className="text-background/70 hover:text-background transition-colors text-sm">Education</a>
-              <a href="#contact" className="text-background/70 hover:text-background transition-colors text-sm">Contact</a>
+            <h4 className="font-bold text-lg mb-6">Quick Links</h4>
+            <div className="space-y-3">
+              <a href="#home" className="block text-background/70 hover:text-background hover:translate-x-1 transition-all">Home</a>
+              <a href="#skills" className="block text-background/70 hover:text-background hover:translate-x-1 transition-all">Skills</a>
+              <a href="#journey" className="block text-background/70 hover:text-background hover:translate-x-1 transition-all">Journey</a>
+              <a href="#work" className="block text-background/70 hover:text-background hover:translate-x-1 transition-all">Work</a>
+              <a href="#academics" className="block text-background/70 hover:text-background hover:translate-x-1 transition-all">Academics</a>
             </div>
           </div>
 
-          {/* Contact */}
+          {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-4">Get in Touch</h4>
-            <div className="space-y-3">
-              <a
-                href="mailto:nithyanandvk2005@gmail.com"
-                className="flex items-center gap-2 text-background/70 hover:text-background transition-colors text-sm"
-              >
-                <Mail className="w-4 h-4" />
-                nithyanandvk2005@gmail.com
-              </a>
-              <div className="flex items-center gap-3 pt-2">
-                <a
-                  href="https://linkedin.com/in/nithyanandvk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
+            <h4 className="font-bold text-lg mb-6">Get in Touch</h4>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-primary mt-0.5" />
+                <a href="mailto:nithyanandvk2005@gmail.com" className="text-background/70 hover:text-background transition-colors text-sm break-all">
+                  nithyanandvk2005@gmail.com
                 </a>
-                <a
-                  href="https://github.com/nithyanandvk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-background/10 rounded-lg hover:bg-background/20 transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-primary mt-0.5" />
+                <span className="text-background/70 text-sm">Tirupati, Andhra Pradesh, India</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Send className="w-5 h-5 text-primary mt-0.5" />
+                <span className="text-background/70 text-sm">Open for opportunities</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-background/20 pt-8">
+      {/* Bottom Bar */}
+      <div className="border-t border-background/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-background/70 text-sm">
-              © {currentYear} All Rights Reserved
+            <p className="text-background/60 text-sm">
+              © {currentYear} Nithyanand V K. All rights reserved.
             </p>
-            <p className="flex items-center gap-1 text-background/70 text-sm">
-              Made with <Heart className="w-4 h-4 text-red-400 fill-red-400" /> by Nithyanand V K
+            <p className="flex items-center gap-2 text-background/60 text-sm">
+              Crafted with <Heart className="w-4 h-4 text-red-400 fill-red-400" /> and lots of coffee
             </p>
           </div>
         </div>

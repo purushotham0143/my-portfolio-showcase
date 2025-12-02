@@ -1,43 +1,52 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Code2 } from "lucide-react";
 
 const profiles = [
   {
     platform: "LeetCode",
     username: "@nithyanandvk2005",
-    highlight: "Solved 490+ DSA problems",
-    description: "Regularly practice algorithms and data structures, focusing on medium and hard problems.",
+    stat: "490+",
+    statLabel: "Problems Solved",
+    description: "Regular practice on algorithms and data structures with focus on medium and hard problems.",
     url: "https://leetcode.com/nithyanandvk2005",
-    color: "bg-amber-500",
+    gradient: "from-amber-400 to-orange-500",
+    bgGradient: "from-amber-500/10 to-orange-500/10",
   },
   {
     platform: "GitHub",
     username: "@nithyanandvk",
-    highlight: "20+ repositories",
-    description: "Active contributor with various personal and collaborative projects, focusing on web applications.",
+    stat: "20+",
+    statLabel: "Repositories",
+    description: "Active contributor with various personal and collaborative web development projects.",
     url: "https://github.com/nithyanandvk",
-    color: "bg-gray-800",
+    gradient: "from-gray-600 to-gray-800",
+    bgGradient: "from-gray-500/10 to-gray-700/10",
   },
   {
     platform: "HackerRank",
     username: "@nithyanandvk2005",
-    highlight: "5-Star Java Badge",
-    description: "Achieved 5-star rating in Java, with expertise in problem-solving and algorithms challenges.",
+    stat: "5★",
+    statLabel: "Java Badge",
+    description: "Achieved 5-star rating in Java with expertise in problem-solving and algorithm challenges.",
     url: "https://hackerrank.com/nithyanandvk2005",
-    color: "bg-emerald-500",
+    gradient: "from-emerald-400 to-green-600",
+    bgGradient: "from-emerald-500/10 to-green-600/10",
   },
 ];
 
 const CodingProfiles = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">Online Presence</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
-            Coding Profiles
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-light border border-primary/20 rounded-full mb-4">
+            <Code2 className="w-4 h-4 text-primary" />
+            <span className="text-primary text-sm font-semibold">Coding Journey</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            Online Profiles
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Check out my coding journey and problem-solving skills across various platforms
+            Explore my problem-solving journey across competitive programming platforms
           </p>
         </div>
 
@@ -48,19 +57,28 @@ const CodingProfiles = () => {
               href={profile.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all hover:-translate-y-1 animate-fade-up"
+              className={`group relative bg-gradient-to-br ${profile.bgGradient} rounded-2xl p-6 border border-border hover:border-transparent hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-up opacity-0 overflow-hidden`}
               style={{ animationDelay: `${0.15 * index}s` }}
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className={`w-12 h-12 ${profile.color} rounded-lg flex items-center justify-center`}>
-                  <span className="text-white font-bold text-lg">{profile.platform[0]}</span>
-                </div>
-                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <ExternalLink className="w-5 h-5 text-muted-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-1">{profile.platform}</h3>
-              <p className="text-primary text-sm mb-2">{profile.username}</p>
-              <p className="font-medium text-foreground mb-2">{profile.highlight}</p>
-              <p className="text-muted-foreground text-sm">{profile.description}</p>
+              
+              <div className={`inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br ${profile.gradient} rounded-2xl shadow-lg mb-5`}>
+                <span className="text-white font-bold text-2xl">{profile.platform[0]}</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-foreground mb-1">{profile.platform}</h3>
+              <p className="text-muted-foreground text-sm mb-4">{profile.username}</p>
+              
+              <div className="mb-4">
+                <span className={`text-4xl font-extrabold bg-gradient-to-r ${profile.gradient} bg-clip-text text-transparent`}>
+                  {profile.stat}
+                </span>
+                <p className="text-sm text-muted-foreground font-medium">{profile.statLabel}</p>
+              </div>
+              
+              <p className="text-muted-foreground text-sm leading-relaxed">{profile.description}</p>
             </a>
           ))}
         </div>
