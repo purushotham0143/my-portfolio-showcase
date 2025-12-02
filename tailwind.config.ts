@@ -50,11 +50,16 @@ export default {
         brand: {
           DEFAULT: "hsl(var(--brand))",
           light: "hsl(var(--brand-light))",
+          dark: "hsl(var(--brand-dark))",
           foreground: "hsl(var(--brand-foreground))",
         },
         surface: {
           DEFAULT: "hsl(var(--surface))",
           hover: "hsl(var(--surface-hover))",
+        },
+        gradient: {
+          start: "hsl(var(--gradient-start))",
+          end: "hsl(var(--gradient-end))",
         },
       },
       fontFamily: {

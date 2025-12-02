@@ -1,94 +1,111 @@
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, ArrowUpRight, Rocket } from "lucide-react";
 
 const experiences = [
   {
     title: "Web Lead & Full Stack Developer",
     organization: "ISTE MBU & SVEC",
     period: "2023 - Present",
-    description:
-      "Led the design and development of the official club website using MERN stack. Integrated authentication, admin panel, and dynamic event management. Collaborated with faculty to promote and organize over 25+ events and earned recognition as Web Lead.",
+    highlights: [
+      "Led MERN stack website development",
+      "Built authentication & admin panel",
+      "Organized 25+ events"
+    ],
   },
   {
     title: "Web Lead & Technical Mentor",
     organization: "The Coding Club MBU",
     period: "2024 - Present",
-    description:
-      "Developing the Coding Club portal with dynamic UI/UX and event features. Mentored students in MERN stack, Java, Git and led coding events for 500+ participants. Contributed to increasing club registrations through active engagement and tech initiatives.",
+    highlights: [
+      "Developing dynamic club portal",
+      "Mentored 500+ students",
+      "Led coding events & workshops"
+    ],
   },
   {
     title: "GDSC Coordinator",
     organization: "Google Developer Student Club, MBU",
     period: "2023 - 2024",
-    description:
-      "Promoted Google programs like Arcade and various tech workshops on cloud, web development. Encouraged students to complete Google certifications.",
+    highlights: [
+      "Promoted Google Arcade program",
+      "Organized tech workshops",
+      "Drove certification completions"
+    ],
   },
 ];
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-surface">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="work" className="py-24 bg-card">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">Journey</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
-            Professional Experience
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-light border border-primary/20 rounded-full mb-4">
+            <Briefcase className="w-4 h-4 text-primary" />
+            <span className="text-primary text-sm font-semibold">Experience</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            Professional Journey
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Leadership roles and contributions that have shaped my professional growth
+            Leadership roles and contributions shaping my professional growth
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
           {experiences.map((exp, index) => (
             <div
               key={exp.title}
-              className="bg-card rounded-xl p-6 border border-border hover:shadow-md transition-shadow animate-fade-up"
+              className="group relative bg-background rounded-2xl p-6 border border-border hover:border-primary/30 transition-all animate-fade-up opacity-0"
               style={{ animationDelay: `${0.15 * index}s` }}
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="p-3 bg-brand-light rounded-lg">
-                    <Briefcase className="w-6 h-6 text-primary" />
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                    <h3 className="text-xl font-semibold text-foreground">{exp.title}</h3>
-                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                      <Calendar className="w-4 h-4" />
-                      <span>{exp.period}</span>
-                    </div>
-                  </div>
-                  <p className="text-primary font-medium text-sm mb-3">{exp.organization}</p>
-                  <p className="text-muted-foreground">{exp.description}</p>
-                </div>
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                <ArrowUpRight className="w-5 h-5 text-primary" />
               </div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface text-muted-foreground rounded-full text-sm mb-4">
+                <Calendar className="w-3.5 h-3.5" />
+                {exp.period}
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">{exp.title}</h3>
+              <p className="text-primary font-medium text-sm mb-4">{exp.organization}</p>
+              <ul className="space-y-2">
+                {exp.highlights.map((highlight, i) => (
+                  <li key={i} className="flex items-start gap-2 text-muted-foreground text-sm">
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        {/* Hire Me Section */}
-        <div className="mt-16 text-center bg-brand-light rounded-2xl p-8 md:p-12 animate-fade-up">
-          <h3 className="text-2xl font-bold text-foreground mb-4">Hire Me</h3>
-          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-            I'm available for full-time positions, internships, and freelance projects. 
-            Let's create something amazing together!
-          </p>
-          <div className="flex items-center justify-center gap-4 flex-wrap">
-            <a
-              href="#contact"
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
-            >
-              Contact Me
-            </a>
-            <a
-              href="https://nithyanandvk.netlify.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-card text-foreground border border-border rounded-lg font-medium hover:bg-surface-hover transition-colors"
-            >
-              View Resume
-            </a>
+        {/* CTA Section */}
+        <div className="relative overflow-hidden bg-gradient-to-r from-gradient-start to-gradient-end rounded-3xl p-8 md:p-12 animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
+          
+          <div className="relative text-center">
+            <Rocket className="w-12 h-12 text-white/90 mx-auto mb-4" />
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Collaborate?</h3>
+            <p className="text-white/80 mb-8 max-w-xl mx-auto">
+              Available for full-time positions, internships, and freelance projects. 
+              Let us build something remarkable together!
+            </p>
+            <div className="flex items-center justify-center gap-4 flex-wrap">
+              <a
+                href="#connect"
+                className="px-8 py-3.5 bg-white text-primary rounded-xl font-semibold hover:shadow-lg transition-all"
+              >
+                Contact Me
+              </a>
+              <a
+                href="https://nithyanandvk.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-white/10 text-white border border-white/30 rounded-xl font-semibold hover:bg-white/20 transition-all"
+              >
+                View Resume
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,79 +1,90 @@
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, BookOpen } from "lucide-react";
 
 const educationData = [
   {
-    degree: "B-Tech in Computer Science Engineering",
+    degree: "B.Tech Computer Science Engineering",
     institution: "Mohan Babu University, Tirupati",
     period: "2022 - 2026",
-    gpa: "9.81/10",
-    description: "Specialized in Software Engineering with a strong focus on full-stack web development, algorithms, and emerging technologies.",
+    gpa: "9.81",
+    description: "Specializing in Software Engineering with focus on full-stack development and emerging technologies.",
+    current: true,
   },
   {
     degree: "Intermediate (MPC)",
-    institution: "Sai Sri Chaitanya Junior College, Palamaner",
+    institution: "Sai Sri Chaitanya Jr. College, Palamaner",
     period: "2020 - 2022",
-    gpa: "9.71/10",
-    description: "Completed Intermediate with 97.1%, securing Town Topper in 1st year.",
+    gpa: "9.71",
+    description: "Completed with 97.1%, securing Town Topper recognition in 1st year.",
+    current: false,
   },
   {
-    degree: "SSC (10th Class)",
+    degree: "Secondary School (SSC)",
     institution: "Ravindra Bharathi School, Palamaner",
     period: "2020",
-    gpa: "9.88/10",
+    gpa: "9.88",
     description: "Completed 10th class with 98.8%, demonstrating consistent academic excellence.",
+    current: false,
   },
 ];
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-surface">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="academics" className="py-24 bg-card">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold uppercase tracking-wider">Learning</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
-            Education
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-light border border-primary/20 rounded-full mb-4">
+            <BookOpen className="w-4 h-4 text-primary" />
+            <span className="text-primary text-sm font-semibold">Academics</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            Educational Background
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            My academic journey that built the foundation for my technical expertise
+            Academic journey that built the foundation for technical expertise
           </p>
         </div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
+        <div className="max-w-3xl mx-auto">
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gradient-start to-gradient-end" />
 
-          <div className="space-y-8">
-            {educationData.map((edu, index) => (
-              <div
-                key={edu.degree}
-                className="relative md:pl-20 animate-fade-up"
-                style={{ animationDelay: `${0.15 * index}s` }}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-6 w-5 h-5 bg-primary rounded-full border-4 border-background hidden md:block" />
+            <div className="space-y-8">
+              {educationData.map((edu, index) => (
+                <div
+                  key={edu.degree}
+                  className="relative pl-16 md:pl-20 animate-fade-up opacity-0"
+                  style={{ animationDelay: `${0.15 * index}s` }}
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-4 md:left-6 w-5 h-5 bg-gradient-to-br from-gradient-start to-gradient-end rounded-full border-4 border-card shadow-lg" />
+                  
+                  {edu.current && (
+                    <div className="absolute left-2 md:left-4 w-9 h-9 bg-primary/20 rounded-full animate-ping" />
+                  )}
 
-                <div className="bg-card rounded-xl p-6 border border-border hover:shadow-md transition-shadow">
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="p-3 bg-brand-light rounded-lg">
-                        <GraduationCap className="w-6 h-6 text-primary" />
+                  <div className="bg-background rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all">
+                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                      <div className="flex items-start gap-4">
+                        <div className="hidden sm:flex p-3 bg-brand-light rounded-xl">
+                          <GraduationCap className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-foreground">{edu.degree}</h3>
+                          <p className="text-primary font-medium text-sm">{edu.institution}</p>
+                          <p className="text-muted-foreground text-sm">{edu.period}</p>
+                        </div>
+                      </div>
+                      <div className="text-center px-4 py-2 bg-gradient-to-br from-gradient-start to-gradient-end rounded-xl">
+                        <span className="text-2xl font-bold text-white block">{edu.gpa}</span>
+                        <span className="text-xs text-white/80">GPA/10</span>
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                        <h3 className="text-xl font-semibold text-foreground">{edu.degree}</h3>
-                        <span className="inline-flex items-center px-3 py-1 bg-brand-light text-primary text-sm font-semibold rounded-full">
-                          GPA: {edu.gpa}
-                        </span>
-                      </div>
-                      <p className="text-primary font-medium text-sm mb-1">{edu.institution}</p>
-                      <p className="text-muted-foreground text-sm mb-3">{edu.period}</p>
-                      <p className="text-muted-foreground">{edu.description}</p>
-                    </div>
+                    <p className="text-muted-foreground">{edu.description}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
