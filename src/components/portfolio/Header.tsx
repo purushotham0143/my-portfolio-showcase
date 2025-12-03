@@ -7,10 +7,11 @@ const Header = () => {
   const navLinks = [
     { href: "#home", label: "Home" },
     { href: "#skills", label: "Skills" },
-    { href: "#journey", label: "Journey" },
+    { href: "#journey", label: "Certifications" },
     { href: "#work", label: "Work" },
     { href: "#academics", label: "Academics" },
-    { href: "#connect", label: "Connect" },
+    { href: "#projects", label: "Projects" },
+    { href: "./gallery", label: "Gallery" },
   ];
 
   return (
@@ -20,13 +21,13 @@ const Header = () => {
           <a href="#home" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="w-11 h-11 bg-gradient-to-br from-gradient-start to-gradient-end rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-                <span className="text-primary-foreground font-bold text-xl">N</span>
+                <span className="text-primary-foreground font-bold text-xl">R</span>
               </div>
               <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
             <div className="hidden sm:block">
-              <span className="font-bold text-foreground text-lg block leading-tight">Nithyanand</span>
-              <span className="text-xs text-muted-foreground">Developer & Creator</span>
+              <span className="font-bold text-foreground text-lg block leading-tight">Ragala Purushotham</span>
+              <span className="text-xs text-muted-foreground">Full Stack Developer</span>
             </div>
           </a>
 

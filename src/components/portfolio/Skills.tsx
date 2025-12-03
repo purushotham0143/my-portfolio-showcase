@@ -1,16 +1,16 @@
-import { Code, Server, Database, Cpu, GitBranch, Users, Zap } from "lucide-react";
+import { Code, Server, Database, Cpu, GitBranch, Users, Zap,Cloud } from "lucide-react";
 
 const skillCategories = [
   {
     title: "Frontend Development",
     icon: Code,
-    skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS", "React"],
+    skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS", "React","TypeScript"],
     color: "from-teal-500 to-emerald-500",
   },
   {
     title: "Backend Development",
     icon: Server,
-    skills: ["Node.js", "Express", "RESTful APIs"],
+    skills: ["Node.js", "Express","Redis","JWT", "RESTful APIs"],
     color: "from-blue-500 to-cyan-500",
   },
   {
@@ -19,22 +19,26 @@ const skillCategories = [
     skills: ["MongoDB", "Mongoose", "SQL Databases"],
     color: "from-violet-500 to-purple-500",
   },
+   {
+    title: "Cloud(AWS)",
+    icon: Cloud,
+    skills: ["Ec2","S3","VPC","IAM","DynamoDb","RDS","Elastic BeanStalk",
+      "Cloudwatch","SNS","Kinesis","Lambda","Docker","Kubernetes","CI/CD","Cloudformation",
+      "Amazon Lex","KMS"
+
+    ],
+    color: "from-indigo-500 to-blue-500",
+  },
   {
     title: "Programming & DSA",
     icon: Cpu,
-    skills: ["Java Development", "Data Structures", "Algorithms", "Problem Solving"],
+    skills: ["Java","C++","C","Socket", "Data Structures Algorithms"],
     color: "from-orange-500 to-amber-500",
-  },
-  {
-    title: "Development Tools",
-    icon: GitBranch,
-    skills: ["Git", "GitHub", "VS Code", "AI Tools"],
-    color: "from-pink-500 to-rose-500",
   },
   {
     title: "Leadership & Soft Skills",
     icon: Users,
-    skills: ["Team Leadership", "Event Organization", "Mentoring", "Communication"],
+    skills: ["Team Work",  "Problem Solving","Quick Learner", "Adaptive","Active Listener"],
     color: "from-indigo-500 to-blue-500",
   },
 ];

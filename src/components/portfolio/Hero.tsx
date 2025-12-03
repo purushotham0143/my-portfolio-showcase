@@ -17,12 +17,12 @@ const Hero = () => {
             </div>
             
             <h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground mb-6 leading-tight animate-fade-up opacity-0" 
+              className="text-4xl sm:text-5xl lg:text-5xl font-extrabold text-foreground mb-6 leading-tight animate-fade-up opacity-0" 
               style={{ animationDelay: "0.2s" }}
             >
-              Crafting Digital
+               Transforming Ideas Into
               <span className="block bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent">
-                Experiences
+                Powerful Applications
               </span>
             </h1>
             
@@ -30,7 +30,7 @@ const Hero = () => {
               className="text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed animate-fade-up opacity-0" 
               style={{ animationDelay: "0.3s" }}
             >
-              Building elegant, high-performance web applications with modern JavaScript 
+              Building elegant, high-performance web applications with modern 
               frameworks. Passionate about clean code and scalable solutions.
             </p>
 
@@ -40,7 +40,7 @@ const Hero = () => {
             >
               <span className="px-3 py-1 bg-surface text-muted-foreground rounded-full text-sm font-medium">MERN Stack</span>
               <span className="px-3 py-1 bg-surface text-muted-foreground rounded-full text-sm font-medium">Java</span>
-              <span className="px-3 py-1 bg-surface text-muted-foreground rounded-full text-sm font-medium">2x Hackathon Winner</span>
+              <span className="px-3 py-1 bg-surface text-muted-foreground rounded-full text-sm font-medium">Devops</span>
             </div>
             
             <div 
@@ -56,7 +56,7 @@ const Hero = () => {
               </a>
               <div className="flex items-center gap-2">
                 <a
-                  href="https://linkedin.com/in/nithyanandvk"
+                  href="https://in.linkedin.com/in/ragala-purushotham-203481252"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-card border border-border text-foreground rounded-xl hover:border-primary/50 hover:text-primary transition-all"
@@ -65,7 +65,7 @@ const Hero = () => {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="https://github.com/nithyanandvk"
+                  href="https://github.com/purushotham0143"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-card border border-border text-foreground rounded-xl hover:border-primary/50 hover:text-primary transition-all"
@@ -74,7 +74,7 @@ const Hero = () => {
                   <Github size={20} />
                 </a>
                 <a
-                  href="mailto:nithyanandvk2005@gmail.com"
+                  href="mailto:rpurushotham0143@gmail.com"
                   className="p-3 bg-card border border-border text-foreground rounded-xl hover:border-primary/50 hover:text-primary transition-all"
                   aria-label="Email"
                 >

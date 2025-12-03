@@ -12,10 +12,10 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-gradient-start to-gradient-end rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">N</span>
+                <span className="text-white font-bold text-xl">R</span>
               </div>
               <div>
-                <span className="font-bold text-xl block">Nithyanand V K</span>
+                <span className="font-bold text-xl block">Ragala Purushotham</span>
                 <span className="text-background/60 text-sm">Full Stack Developer</span>
               </div>
             </div>
@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com/in/nithyanandvk"
+                href="https://in.linkedin.com/in/ragala-purushotham-203481252"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-background/10 rounded-xl hover:bg-primary hover:text-white transition-all"
@@ -34,7 +34,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/nithyanandvk"
+                href="https://github.com/purushotham0143"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-background/10 rounded-xl hover:bg-primary hover:text-white transition-all"
@@ -43,7 +43,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="mailto:nithyanandvk2005@gmail.com"
+                href="mailto:rpurushotham0143@gmail.com"
                 className="p-3 bg-background/10 rounded-xl hover:bg-primary hover:text-white transition-all"
                 aria-label="Email"
               >
@@ -71,12 +71,12 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary mt-0.5" />
                 <a href="mailto:nithyanandvk2005@gmail.com" className="text-background/70 hover:text-background transition-colors text-sm break-all">
-                  nithyanandvk2005@gmail.com
+                  rpurushotham0143@gmail.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                <span className="text-background/70 text-sm">Tirupati, Andhra Pradesh, India</span>
+                <span className="text-background/70 text-sm">Nellore, Andhra Pradesh, India</span>
               </div>
               <div className="flex items-start gap-3">
                 <Send className="w-5 h-5 text-primary mt-0.5" />
@@ -92,7 +92,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-background/60 text-sm">
-              © {currentYear} Nithyanand V K. All rights reserved.
+              © {currentYear} Ragala Purushotham. All rights reserved.
             </p>
             <p className="flex items-center gap-2 text-background/60 text-sm">
               Crafted with <Heart className="w-4 h-4 text-red-400 fill-red-400" /> and lots of coffee

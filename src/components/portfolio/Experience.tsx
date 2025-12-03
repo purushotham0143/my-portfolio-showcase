@@ -2,33 +2,13 @@ import { Briefcase, Calendar, ArrowUpRight, Rocket } from "lucide-react";
 
 const experiences = [
   {
-    title: "Web Lead & Full Stack Developer",
-    organization: "ISTE MBU & SVEC",
-    period: "2023 - Present",
+    title: "Fresher",
+    organization: "Chitkara University Himachal Pradesh",
+    period: "2022 - 2026",
     highlights: [
-      "Led MERN stack website development",
-      "Built authentication & admin panel",
-      "Organized 25+ events"
-    ],
-  },
-  {
-    title: "Web Lead & Technical Mentor",
-    organization: "The Coding Club MBU",
-    period: "2024 - Present",
-    highlights: [
-      "Developing dynamic club portal",
-      "Mentored 500+ students",
-      "Led coding events & workshops"
-    ],
-  },
-  {
-    title: "GDSC Coordinator",
-    organization: "Google Developer Student Club, MBU",
-    period: "2023 - 2024",
-    highlights: [
-      "Promoted Google Arcade program",
-      "Organized tech workshops",
-      "Drove certification completions"
+      "Experienced in MERN Stack Website Development",
+      "Specialized in Full-Stack Web Development",
+      "Built 10+ Projects During My College Journey"
     ],
   },
 ];
@@ -98,7 +78,7 @@ const Experience = () => {
                 Contact Me
               </a>
               <a
-                href="https://nithyanandvk.netlify.app"
+                href="https://drive.google.com/file/d/1jJ2UKoaI24Lx7n5F2kQE4L-7ZIV3_Ty0/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3.5 bg-white/10 text-white border border-white/30 rounded-xl font-semibold hover:bg-white/20 transition-all"

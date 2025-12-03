@@ -2,27 +2,27 @@ import { GraduationCap, BookOpen } from "lucide-react";
 
 const educationData = [
   {
-    degree: "B.Tech Computer Science Engineering",
-    institution: "Mohan Babu University, Tirupati",
+    degree: "B.E Computer Science Engineering",
+    institution: "Chitkara University,Himachal Pradesh",
     period: "2022 - 2026",
-    gpa: "9.81",
-    description: "Specializing in Software Engineering with focus on full-stack development and emerging technologies.",
+    gpa: "going",
+    description: "Specializing in Software Engineering with focus on full-stack development and devops and emerging technologies.",
     current: true,
   },
   {
     degree: "Intermediate (MPC)",
-    institution: "Sai Sri Chaitanya Jr. College, Palamaner",
+    institution: "Sai Sri Chaitanya Jr. College, Nellore",
     period: "2020 - 2022",
-    gpa: "9.71",
-    description: "Completed with 97.1%, securing Town Topper recognition in 1st year.",
+    gpa: "7.27",
+    description: "Completed MPC with solid subject knowledge and consistent academic growth during the two-year program.",
     current: false,
   },
   {
     degree: "Secondary School (SSC)",
-    institution: "Ravindra Bharathi School, Palamaner",
+    institution: "VBR English Medium  School, Muthukur",
     period: "2020",
-    gpa: "9.88",
-    description: "Completed 10th class with 98.8%, demonstrating consistent academic excellence.",
+    gpa: "9.98",
+    description: "Completed 10th class with 99.8%, demonstrating consistent academic excellence.",
     current: false,
   },
 ];
