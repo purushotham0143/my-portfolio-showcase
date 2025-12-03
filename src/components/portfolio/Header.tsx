@@ -1,3 +1,4 @@
+import VisitorCounter from "@/components/portfolio/VisitorCounter";
 import { useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 
@@ -71,6 +72,10 @@ const Header = () => {
             </div>
           </div>
         )}
+        {/* Visitors in mobile menu */}
+            <div className="px-4">
+              <VisitorCounter />
+            </div>
       </nav>
     </header>
   );
